@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divece-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Box Model</title>
+        <style>
+            body,html{
+                padding: 0;
+                margin: 0;
+                background-color: green;
+                height: 100%;
+            }
+            .box{
+                background-color: yellow;
+                width: 50%;
+                height: 50%;
+                padding: 15px 10px 15px 30px;
+                margin-top: 50px;
+                margin-left: 50px;
+            }/*padding은 border에서 안쪽으로 있는 간격, 반대로 margin은 border에서 바깥쪽으로 있는 간격.
+            padding과 margin에 적용되는 규칙: 한 숫자만 쓰면 상하좌우 모두 적용됨.
+            두 개만 쓰면 각각 상하, 좌우에 적용됨, 4개를 쓰면 상-우-하-좌 순서로 적용됨.*/
+            
+                .inside-box{
+                background-color: blue;
+                width: 50%;
+                height: 50%;
+                border-width: 5px;
+                border-color: red;
+                border-style: dashed;
+                /*단축키는 border: 5px dashed red*/
+            
+
+            }
+    
+        </style>
+
+    </head>
+    <body>
+        <div class="box">
+            <div class="inside-box">
+                
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

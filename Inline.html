@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divece-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Inline Example</title>
+        <style>
+            .box1{/*이 각각의 박스 하나하나가 block이다.
+                block은 element의 크기와 상관없이 그 옆에 다른 element를 허용하지 않는 것이다.*/
+                background-color: red;
+                width: 200px;
+                height: 200px;
+                border: 5px solid white;
+                padding: 5px 10px;
+                display: block;
+                /*inline-block은 블럭을 서로 옆에 위치시킨다. 블럭은 위-아래로 배치되거나, inline block으로 양 옆에 배치된다*/
+
+            }
+            .box2{
+                background-color: blue;
+                width: 200px;
+                height: 200px;
+            }
+
+            .box3{
+                background-color: gray;
+                width: 200px;
+                height: 200px;
+                display: inline-block;
+            }
+
+            .box4{
+                background-color: gray;
+                width: 200px;
+                height: 200px;
+                display: inline-block;
+            }
+
+            #this-box{
+                background-color: green;
+                width: 200px;
+                height: 200px;
+                /*display: inline;*/
+                /*inline은 박스의 모든 property 설정값을 지운다.
+                inline은 텍스트화한다. 텍스트는 높이와 폭 없이, 컨텐츠의 길이만 있다.*/
+            }
+            #that-box{
+                background-color: green;
+                width: 200px;
+                height: 200px;
+                display: block;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+       
+        <span class="box1">hi</span>
+        <span class="box1">hellow</span>
+        <span id="this-box" class="box2">hi</span>
+        <div id="that-box" class="box2">hi, my name is</div>
+        <div class="box2">hi, my name is</div>
+    
+
+        <span style="background-color:red">span1</span>
+        <span style="background-color:blue">span2</span>
+        <span style="background-color:green">span3</span>
+    <!--<span></span> 태그는 <div></div> 태그처럼 특별한 기능을 갖고있지 않고, CSS와 함께 쓰입니다.
+    <div> 태그와의 차이점은 display속성이 block이 아닌, inline이라는 점인데, 이는 CSS display 항목에서 세부 정보를 알 수 있습니다.
+    이 둘의 차이를 쉽게 설명하자면, <div>는 줄 바꿈이 되지만, <span>은 줄 바꿈이 되지 않다는 점입니다.-->
+
+        <div class="box3">hi, my name is</div>
+        <div class="box3">hi, my name is</div>
+        <div class="box3">hi, my name is</div>
+
+        <span class="box4">hi, my name is</div>
+        <span class="box4">hi, my name is</div>
+        <span class="box4">hi, my name is</div>
+
+        <!--1) block은 박스의 폭, 높이가 있고, 양 옆에 다른 element를 놓을 수 없다.
+        반면 inline-block은 박스의 폭, 높이가 있고, 양 옆에 다른 element가 온다.
+        그러나 이들과 달리 inline은 박스 내부의 텍스트만을 고려해 폭과 높이를 설정하고, 양 옆에 다른 element가 온다.
+        div로 구분된 박스들은 서로 경계선은 보전되는데 반해, span으로 구분되는 박스들은 경계없이 붙는다.
+        그래서 inline을 유지하면서도 구분된 박스 형태를 유지하고 싶으면 div로 써라.
+        span 에서 폭과 높이를 가진 박스를 만들고 싶으면, display: block를 써라.-->
+
+</body>
+
+
+        
+</html>

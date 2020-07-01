@@ -1,0 +1,20 @@
+h1 {
+    background-color: gray;           
+    font-size: 50px;
+    color: blue;
+
+}
+body {
+    background-color: red;
+}
+
+/*property-name: value;
+
+selector(#id, .class, tage name) {
+    propertyname: value;
+
+h1 {
+    property-name: value;/*이렇게 하면 중괄호 사이의 property들이 h1에 적용된다.
+                            모든 태그 이름이 'h1' 대신 들어갈 수 있다.
+
+css는 selector과 property으로 나뉜다.*/

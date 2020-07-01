@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divece-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Box Model</title>
+        <style>
+          body,html{
+                height: 100%
+                
+            }
+            body{
+                height: 400%;
+                background-color: red;
+            }          
+            .box{
+                height: 300px;
+                width: 300px;
+                color: yellow;
+                background-color:blueviolet;
+               
+            }
+            #box-one{
+                height: 300px;
+                width: 300px;
+                color: yellow;
+                background-color:black;
+                position: static;
+                */
+                /*포지션을 설정한다. static은 파일에서 있던 자리 그대로 있는 반면,
+                fixed는 화면에서 있던 자리 그대로 있다. 그래서 스크롤을 내리면 따라 내려온다.
+                포지션을 고정하고 상하좌우 간격 4가지 설정을 할 수 있다.*/
+                
+                margin-top: 10px
+            }
+            #box-two{
+                height: 100px;
+                width: 50px;
+                color: yellow;
+                background-color:blue;
+                position: fixed;
+                
+            }
+
+            .abs-box{
+                height: 400px;
+                width: 400px;
+                color: yellow;
+                background-color:green;
+                position: relative;
+                
+            }
+            .abs-child{
+                height: 100px;
+                width: 100px;
+                color: pink;
+                background-color:wheat;
+                position: absolute;
+                /*position이 absolute가 되면 html상에서 해당 element와 관계가 있는,
+                즉 부모박스(relative) elemnet를 살펴보고 이에 상응해서 포지션이 결정되다.
+                그러데 만약 부모 박스에 없으면 우리가 설정한 대로 나타난다.*/
+                right:10px;
+                top:10px;
+            
+            }
+
+            /*포지션에는 fixed, relative, absolute, static 4 가지가 있다.
+            1_ static은 디폴트
+            2. fixed는 화면상 위치 고정, 오버랩 가능
+            3. absolute는 포지션 relative에 상대적으로 포지션을 가지는 것
+            4. absolute는 relative 포지션이 없는 경우 문서의 본문 body에 맞춰 포지션을 정함.
+               이때 body에서도 포함되는 요소는 포함하는 요소 안에 들어가 있어야 한다.*/
+        </style>
+
+    </head>
+    <body>
+    
+        <!--<div class="box">box</div>-->
+       <div id="box-one">
+                <div class="box-child">hi
+                </div></div>
+
+        <div id="box-two">
+            <div class="box-child">hi box two
+            </div>
+        </div>
+
+    
+            <div class="abs-box">hi
+            
+                <div class="abs-child">three box
+            </div>
+      </div>
+        
+
+    </body>
+</html>
