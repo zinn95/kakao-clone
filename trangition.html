@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divece-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>transition/transformatino</title>
+        <style>
+
+            body{
+                background-color: pink;
+            }
+            @media screen and (min-width: 320px) and (max-width: 640px){
+           body{
+               background-color: blue;
+           } 
+            }
+
+            /*@미디어를 통해 브라우저 크기가 최소 320px, 최대 640px인 경우를 지정한다.
+            그리고 이 경우 어떤 스타일을 가질지 다시 설정한다.*/
+            .box1{
+                background-color: green;
+            color: white;
+                
+            transition: all 0.5s ease-in-out;/*all이 걸리는 시간을 적는다.
+            배경색을 바꾸고 싶을 때 background-color 0.5s ease-in-out;
+                         전체를 바꾸고 싶을 때는 all 0.5s ease-in-out;을 쓴다.
+                        정리: transition은 작성한 property(color나 background-color같은) 혹은 all에 변경효과를 주는 것*/
+            }
+            .box1:active{
+                background-color: blue;
+                color:turquoise;
+            }
+
+            .box2{
+                background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            /*transformations은 html문서의 element들을 변경하는 것, 모습이 변하게 하는 효과를 말한다.*/
+            /*transform:rotate(45deg);나 skew(30deg, 20deg);나 translateX(10px) rotate(10deg) translateY(5px);*/
+            transition: transform 1s ease-in-out;   /*transform이 걸리는 시간을 적는다.*/
+            margin-left: 50px;
+            margin-top: 100px;
+                        }
+            .box2:hover{
+                background-color: blue;
+                color:turquoise;
+                transform:rotate(2turn/*45deg*/) scale(.5,.5);
+                /*transform이 이 hover 스타일에 들어와야 hover 된 다음의 사건으로 rotate와 scale조정이 일어난다.*/
+                /*transform을 transition과 합쳤을 때*/
+                }
+
+            .box3{
+                background-color: green;
+                color: white;
+                width: 200px;
+                height: 200px;
+                animation: 3s scaleAndRotateSqure /*infinite*/ ease-in-out;/*걸리는 시간을 적는다,*/
+            
+            margin-left: 50px;
+            margin-top: 100px;
+                        }
+            @keyframes scaleAndRotateSqure /*keyframs는 애니메이션을 생성하는 것을 명령한다. */
+                /*{
+                    from{
+                    transform:none;
+                }
+                to{
+                    transform: rotate(1turn) scale(.5,.5);
+
+                }
+            }*/
+            {
+                0%{
+                    transform:none;
+                }
+                50%{
+                    transform: rotate(1turn) scale(.5,.5);
+                color: red;
+                }
+                100%{
+                    transform: none;
+                color: yellow;
+                }
+            }
+*/
+
+        </style>
+    </head>
+    <body>
+        <span class="box1">
+            transition 연습
+        </span>
+        <div class="box2">transformation 연습</div>
+        <div class="box3">animation 연습</div>
+
+
+        <!--1)트랜지션: 하나의 상태에서 다른 상태로 넘어갈 때 나타나는 효과
+        2) 트랜스포메이션: elemnet의 모양세를 바꾸는 것, 뒤집거나 비틀거나 크기를 키우거나, 등
+        3) 트랜지션-트랜스포메이션 혼합: hover하면 그 트렌지션 손간에 모양새가 트랜스폼, 즉 변하는 것 ㄸ위
+        4) 애니메이션: 키프레임을 만들어 from-to지정, 또는 % 사용. 스탭을 만들 수 있음.
+        5) 미디어쿼리: 브라우저 사이즈 잡기-->
+    </body>
+
+    </html>

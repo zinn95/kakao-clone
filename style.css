@@ -18,3 +18,10 @@ h1 {
                             모든 태그 이름이 'h1' 대신 들어갈 수 있다.
 
 css는 selector과 property으로 나뉜다.*/
+
+/*css에서 element들은 박스다.
+박스에는 4개의 요소가 있다.
+1) content
+2) padding
+3) border
+4) margin

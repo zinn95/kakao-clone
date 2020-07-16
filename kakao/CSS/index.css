@@ -1,0 +1,70 @@
+.friend{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.friend .friend_avatar{/*두 class를 띄어쓰면 앞 class 안에 있는 뒤 class를 말한다.*/
+    width: 50px;
+    height: 50px;
+    border-radius: 38%;
+    margin-right: 15px;
+
+}
+
+.friend_avatar.g-avatar{/*두 class를 붙여쓰면 둘 다 가진 element에 적용된다는 뜻이다*/
+    width: 65px;
+    height: 65px;
+}
+.friend_avatar.m-avatar{
+    width: 60px;
+    height: 60px;
+}
+.friend .friend_column{
+    display: flex;
+    align-items:center;
+}
+
+.friend_content .friend-name{
+    display: block;
+    margin-bottom: 7px;
+
+}
+.friend_content .friend-bottom-text,
+.friend_content .friend-status{    
+    opacity: 0.7;
+}
+.friend_content .friend-bottom-text{
+    font-size: 14px;
+}
+.friend_content .friend-status{
+    font-size: 12px;
+}
+.friend_music{
+    font-size: 12px;
+}
+.friend_content .friend_status,
+.friend .chats_timestamp{
+    font-size: 13px;
+    opacity: 0.6;
+}
+.friend_music{
+    font-size: 13px;
+    border: 2px solid #52e084;
+    padding:2px 12px;
+    border-radius: 15px;
+
+}
+.friend_music span{
+    opacity: 0.7;
+
+}
+.friend_music i{
+    font-size:  12px;
+    opacity: 0.7;
+
+}
+
+.chats_chat{
+    margin: 10px 0px;
+}

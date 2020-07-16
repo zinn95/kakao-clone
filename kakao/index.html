@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>chats</title>
+        <script src="https://kit.fontawesome.com/9acfb2267d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="CSS/styles.css">
+        
+    </head> 
+    <body>
+        <div class="status-bar">
+            <div class="status-bar_column">  
+                <span class="status-bar_clock">18:40</span>
+            </div>
+            <div class="status-bar_column">
+                <i class="fas fa-clock"></i>
+                <i class="fas fa-volume-up"></i>
+                <i class="fas fa-wifi"></i>
+                <span class="status-bar_battery-level">100%</span>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header_header-column">
+                <h1 class="header_title">Chats</h1>
+            </div>
+            <div class="header_header-column">
+                <span class="header_icon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <span class="header_icon">
+                    <i class="far fa-comment"></i>
+                </span>
+                <span class="header_icon">
+                    <a href="settings.html">
+                    <i class="fas fa-cog"></i>
+                    </a>
+                </span>
+        </header>
+        <main class="chats">
+            <ul class="chats_list">
+                <li class="chats_chat chats"><!--list안에는 또 list를 만들면 안된다. -->
+                    <a href="chats.html">
+                        <div class="chats_chat friend friend-large">
+                            <div class="friend_column">
+                                <img src="picture/iu.jpg" class="friend_avatar m-avatar">
+                                <div class="friend_content">
+                                    <span class="friend-name">
+                                        IU
+                                    </span>
+                                    <span class="friend-bottom-text">
+                                        listen Eight!
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="friedn_column">
+                                <span class="chats_timestamp">
+                                    yesterday
+                                </span>
+                            </div>
+                        </div>                                
+                    </a>
+                </li>
+                
+                
+                
+            </ul>
+                        <!--<div class="chat_column">
+                            <img class="chat_avatar g-avatar" src="picture/pieta.jpg">
+                            <div class="chat_content">
+                                
+                                    <span class="chat_username">IU</span>
+                                    <i class="fas fa-bell-slash"></i>
+                                    <span class="chat_preview">today's work..</span>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="chat_column">
+                            <span class="chat_timestamp">yesterday</span>
+                        </div>-->
+
+        </main>
+        <nav class="nav">
+            <ul class="nav_list">
+        <li class="nav_list-item">
+            <a href="friends.html" class="nav_list-link">
+                <i class="far fa-user"></i>    
+            </a>
+        </li>
+        <li class="nav_list-item">
+            <a href="index.html" class="nav_list-link">
+                <div class="nav_badge">8</div>
+                <i class="fas fa-comment"></i>
+            </a>
+        </li>
+        <li class="nav_list-item">
+            <a href="find.html" class="nav_list-link">
+                <i class="fas fa-search"></i>
+            </a>
+        </li>
+        <li class="nav_list-item">
+            <a href="more.html" class="nav_list-link">
+                <i class="fas fa-ellipsis-h"></i>
+            </a>
+        </li>
+            </ul>   
+        </nav>
+    </body>
+</html>

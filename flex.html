@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divece-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex</title>
+    <style>
+        html, body{
+            height: 200%;
+        }
+       .father{
+        display: flex;
+        /*display flex는 그 아래 들어가는 박스들이 이 flex 박스의 속성에 따라 결정되도록 전체 통제한다.*/
+        justify-content: center;
+            /*center또는 space-around 또는 space-between; - justify-content는 박스의 좌우 위치와 간격을 나타낸다.*/
+            align-items: flex-end;
+            /*flex-end 또는 center; 또는 flex-stat; - aline-item은 박스가 상하 위치를 나타낸다.*/
+            height: 100%;
+            flex-direction: column-reverse;/*row, row-reverse, column, column-reverse가 있다.*/
+            /*flex-direction이 column이 되면, align-items이 박스의 좌우 위치 값을 결정한다.
+            반면 원래 좌우 위치를 결정하던 justify-content는 간격을 표현하는 값으로 역할한다.*/  
+            flex-wrap: wrap;
+            /*폭을 유지하고 박스를 밑으로 떨어뜨리고 싶을 때 wrap을 쓴다.
+            디폴트 값으로 플렉스는 no wrap이다. 즉, 폭은 무시하고 줄어든다.*
+            wrap, no wrap, wrap-reverse, no wrap-reverse 가 있다.
+            reverse를 하면 좌우반전된다.*/
+
+
+       }
+        .box{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: yellow;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <div class="father">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+       
+
+        </div>
+
+
+
+    </body>
+</html>

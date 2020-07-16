@@ -1,0 +1,41 @@
+.nav{
+    position: fixed;/*position: fixed는 width와 height가 필요하다.*/
+    width: 100%;
+    padding: 20px 20px;
+    left:0px;
+    
+    bottom: 0px;
+    background-color: #fcfcfc;
+    border-top: 1px solid #f7f7f7
+}
+.nav_list{
+    display:flex;
+    justify-content: space-around;
+
+}
+.nav i{
+    font-size: 20px;
+}
+
+.nav .nav_list-link{
+    position: relative;
+
+}
+
+.nav .nav_badge{
+    position: absolute;
+    /*relative가 static인 상태를 기준으로 주어진 픽셀만큼 움직임
+    absolute는 position: static 속성을 가지고 있지 않은 부모를 기준으로 움직임*/
+    top: -7px;
+    right: -7px;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    color: white;
+    background-color: #dc5d46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 15px;
+}

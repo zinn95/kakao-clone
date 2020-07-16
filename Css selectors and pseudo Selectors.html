@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divece-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Selector and Pseudo Selectors</title>
+        <style>
+          /*  .submit{
+                background-color: red;
+            }*/
+
+           /* input[required="required"]{
+                background-color: whitesmoke;
+            } submit 박스에도 required를 추가하고 style에서 input[type="submit"]을 없애면 required이 적용된다.*/
+            /*input[type="submit"]{
+                background-color: red;/*psuedo Selector란 셀렉터인데 element가 아닌 것을 뜻한다.}
+                */
+
+            .container > .box{
+                    background-color: green;
+                }
+            
+    
+
+            input{
+                border: 2px solid yellow;
+            
+            }
+            /*input + .box{
+                border: 5px solid green
+            }
+*/
+
+            .box{
+                background-color:  violet;
+                display: block;
+                height: 100px;
+                border: 5px solid black;
+
+            }
+
+            .child{
+                width: 40px;
+            /*box child는 컨테이너의 직계가 아니라 box의 직계다.
+            그래서 .container > .box의 영향을 받지 않는다.*/    
+
+            }
+
+
+/*            .box:nth-child(4n-1){
+                background-color: gold;*/
+            }
+            /*박스 중 마지막 박스를 선택하는 가상 셀렉터
+            first-child, nth-child, nth-child(2n), last-child로 쓸 수 있다.            */
+
+
+
+        </style>
+    </head>
+    <body>
+   
+        <div class="container">
+            <div class="box">
+                <div class="box child"></div>
+            </div>
+            <div class="box">2</div>
+
+            <div class="box">
+            <input type="password" required="required">
+            <input type="submit">
+        </div>
+        <div class="box">2</div>
+        <div class="box">2</div>
+        <div class="box">2</div>
+        <div class="box">2</div>
+        <div class="box">2</div>
+
+
+
+        </div>
+    </body>
+</html>
